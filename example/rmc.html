@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"	"http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+ <title>rmc.html</title>
+ <link rel="stylesheet" media="screen" type="text/css" href="default.css" />
+</head>
+<body>
+ <div class="content">
+  <div class="header">rmc.h</div>
+ <div class="navigation">
+  <ul class="classes">
+   <li><a href="corpus.html">corpus</a></li>
+   <li><a href="corpus.html">corpus_document</a></li>
+   <li><a href="rmc.html">count_list</a></li>
+   <li><a href="ct_hash.html">ct_hash</a></li>
+   <li><a href="ct_hash.html">hash_element</a></li>
+   <li><a href="Instance.html">Instance</a></li>
+   <li><a href="lda.html">LDA</a></li>
+   <li><a href="rmc.html">RMC</a></li>
+   <li><a href="SparseCounts.html">SparseCounts</a></li>
+   <li><a href="word_hash.html">word_hash</a></li>
+   <li><a href="word_hash.html">word_hash_element</a></li>
+   <li><a href="WordMap.html">WordMap</a></li>
+  </ul>
+ </div>
+
+<div class='struct'>
+ <h1>count_list</h1>
+ <div class='variables'>
+  <div class='variable'>
+   <span class='id'>next</span> : <span class='type'>struct t_count_list *</span>
+  </div>
+  <div class='variable'>
+   <span class='id'>counts</span> : <span class='type'><a href='SparseCounts.html'>SparseCounts</a> *</span>
+  </div>
+ </div>
+ <div class='methods'>
+  <div class='method'>
+   <span class='type'>void</span>
+   <span class='name'>count_list_free</span>
+   (<span class='args'><a href='rmc.html'>count_list</a> *</span>)
+  </div>
+  <div class='method'>
+   <span class='type'><a href='rmc.html'>count_list</a>  *</span>
+   <span class='name'>count_list_new</span>
+   (<span class='args'></span>)
+  </div>
+ </div>
+</div>
+<div class='struct'>
+ <h1>RMC</h1>
+ <div class='variables'>
+  <div class='variable'>
+   <span class='id'>wordmap</span> : <span class='type'><a href='WordMap.html'>WordMap</a> *</span>
+  </div>
+  <div class='variable'>
+   <span class='id'>alpha</span> : <span class='type'>double</span>
+  </div>
+  <div class='variable'>
+   <span class='id'>instances</span> : <span class='type'><a href='Instance.html'>Instance</a> *</span>
+  </div>
+  <div class='variable'>
+   <span class='id'>n_w_c</span> : <span class='type'><a href='rmc.html'>count_list</a> *</span>
+  </div>
+  <div class='variable'>
+   <span class='id'>beta</span> : <span class='type'>double</span>
+  </div>
+  <div class='variable'>
+   <span class='id'>categories</span> : <span class='type'>unsigned int</span>
+  </div>
+ </div>
+ <div class='methods'>
+  <div class='method'>
+   <span class='type'>double</span>
+   <span class='name'>RMC_P_c_new</span>
+   (<span class='args'><a href='rmc.html'>RMC</a> *rmc</span>)
+  </div>
+  <div class='method'>
+   <span class='type'><a href='rmc.html'>RMC</a>  *</span>
+   <span class='name'>RMC_new</span>
+   (<span class='args'>double alpha, double beta</span>)
+  </div>
+  <div class='method'>
+   <span class='type'>double</span>
+   <span class='name'>RMC_P_w_c</span>
+   (<span class='args'><a href='rmc.html'>RMC</a> *rmc, unsigned int word, unsigned int category</span>)
+  </div>
+  <div class='method'>
+   <span class='type'>double</span>
+   <span class='name'>RMC_P_c_w</span>
+   (<span class='args'><a href='rmc.html'>RMC</a> *rmc, unsigned int category, unsigned int word</span>)
+  </div>
+  <div class='method'>
+   <span class='type'>void</span>
+   <span class='name'>RMC_free</span>
+   (<span class='args'><a href='rmc.html'>RMC</a> *rmc</span>)
+  </div>
+  <div class='method'>
+   <span class='type'>unsigned int</span>
+   <span class='name'>RMC_sample_category</span>
+   (<span class='args'><a href='rmc.html'>RMC</a> *rmc, unsigned int word</span>)
+  </div>
+  <div class='method'>
+   <span class='type'>double</span>
+   <span class='name'>RMC_P_c</span>
+   (<span class='args'><a href='rmc.html'>RMC</a> *rmc, unsigned int category</span>)
+  </div>
+  <div class='method'>
+   <span class='type'>unsigned int</span>
+   <span class='name'>RMC_new_category</span>
+   (<span class='args'><a href='rmc.html'>RMC</a> *rmc</span>)
+  </div>
+  <div class='method'>
+   <span class='type'><a href='SparseCounts.html'>SparseCounts</a>  *</span>
+   <span class='name'>RMC_get_n_w_c</span>
+   (<span class='args'><a href='rmc.html'>RMC</a> *rmc, unsigned int category</span>)
+  </div>
+ </div>
+</div>
+</div></body></html>

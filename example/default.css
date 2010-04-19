@@ -1,0 +1,85 @@
+body {
+	background-color: #999;
+	text-align: center;
+}
+div.content {
+	width: 1000px;
+	text-align: left;
+	margin: 0px auto;
+}
+div.content div.header {
+	text-align: center;
+	font-weight: bold;
+	margin-top: -11px;
+	-moz-border-radius-bottomleft: 4px;
+	-moz-border-radius-bottomright: 4px;
+	font-size: 16pt;
+	padding: 2px;
+}
+div.struct, div.navigation, div.header {
+	font-family: monospace;
+	line-height: 1.25em;
+	background-color: #f5f0e0;
+	margin-bottom: 1em;
+	-moz-box-shadow: 2px 2px 2px #666;
+}
+div.struct, div.navigation {
+	padding: 8px;
+	float: left;
+	-moz-border-radius: 4px;
+}
+div.struct {
+	float:right;
+	width: 730px;
+}
+div.struct h1 {
+	font-size: 14pt;
+	border-bottom:1px solid #999;
+	margin:2px auto 8px auto;
+	text-align:center;
+	width: auto;
+	padding-bottom: 8px;
+}
+div.struct div.variables {
+	border-bottom: 1px solid #999;
+	margin-bottom: 8px;
+	padding-bottom: 8px;
+}
+div.variable span.id {
+	font-weight:bold;
+}
+div.variable span.type {
+	font-style: italic;
+}
+div.method span.type {
+	font-style: italic;
+}
+div.method span.name {
+	font-weight:bold;
+}
+div.method span.args {
+	font-style:italic;
+}
+a {
+	color: #f60;
+	text-decoration: none;
+	padding: 2px 4px;
+}
+a:hover {
+//	border-bottom: 1px dotted #f60;
+	color: #f93;
+	background: #930;
+	-moz-border-radius: 10px;
+}
+
+div.navigation {
+	width: 200px;
+	margin-right: 16px;
+	margin-top: 32px;
+	height: auto;
+}
+
+div.navigation ul.classes, li {
+	padding-left: 1em;
+	list-style: none;
+}
