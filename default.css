@@ -1,5 +1,5 @@
 body {
-	background-color: #999;
+	background-color: #e0e0e0;
 	text-align: center;
 }
 div.content {
@@ -19,9 +19,11 @@ div.content div.header {
 div.struct, div.navigation, div.header {
 	font-family: monospace;
 	line-height: 1.25em;
-	background-color: #f5f0e0;
+	background-color: #f0f0f0;
 	margin-bottom: 1em;
-	-moz-box-shadow: 2px 2px 2px #666;
+	border: 1px solid #fff;
+	color: #333;
+	-moz-box-shadow: 0px 0px 2px #666;
 }
 div.struct, div.navigation {
 	padding: 8px;
@@ -61,15 +63,11 @@ div.method span.args {
 	font-style:italic;
 }
 a {
-	color: #f60;
+	color: #585;
 	text-decoration: none;
-	padding: 2px 4px;
 }
 a:hover {
-//	border-bottom: 1px dotted #f60;
-	color: #f93;
-	background: #930;
-	-moz-border-radius: 10px;
+	color: #252;
 }
 
 div.navigation {
