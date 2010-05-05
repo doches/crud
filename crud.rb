@@ -74,7 +74,8 @@ end
 def generate_html(name,struct,methods)
 	str = ""
 		str +=  "<div class='struct'>\n"
-		str +=  " <h1>#{name}</h1>\n"
+		str +=  " <h1>#{name}"
+		str +=  " <div class='footer'>&nbsp;</div></h1>\n"
 		str +=  " <div class='variables'>\n"
 		struct.each_pair do |id,type|
 			str +=  "  <div class='variable'>\n"
@@ -83,9 +84,10 @@ def generate_html(name,struct,methods)
 					type[i] = "<a href='#{@classes[t]}'>#{t}</a>"
 				end
 			end
-			str +=  "   <span class='id'>#{id}</span> : <span class='type'>#{type.join(' ')}</span>\n"
+			str +=  "   <span class='id'>#{id}</span> <span class='type'>#{type.join(' ')}</span>\n"
 			str +=  "  </div>\n"
 		end
+		str +=  "   <div class='footer'>&nbsp;</div>\n"
 		str +=  " </div>\n"
 		str +=  " <div class='methods'>\n"
 		methods.each_pair do |name,signature|
@@ -103,7 +105,8 @@ def generate_html(name,struct,methods)
 				args.gsub!(klass,"<a href='#{html}'>#{klass}</a>")
 				args.gsub!("__#{html.upcase}__",html)
 			end
-			str +=  "   (<span class='args'>#{args}</span>)\n"
+			str +=  "   <span class='args'>(#{args})</span>\n"
+			str +=  "   <div class='footer'>&nbsp;</div>\n"
 			str +=  "  </div>\n"
 		end
 		str +=  " </div>\n"
