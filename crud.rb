@@ -99,13 +99,13 @@ def generate_html(name,struct,methods)
 			end
 			str +=  "   <span class='type'>#{signature[0].join(' ').strip}</span>\n"
 			str +=  "   <span class='name'>#{name}</span>\n"
-			args = signature[1].join(', ').strip
+			args = signature[1].join('<br />').strip
 			@classes.sort.each do |klass,html|
 				args.gsub!(html,"__#{html.upcase}__")
 				args.gsub!(klass,"<a href='#{html}'>#{klass}</a>")
 				args.gsub!("__#{html.upcase}__",html)
 			end
-			str +=  "   <span class='args'>(#{args})</span>\n"
+			str +=  "   <span class='args'>#{args}</span>\n"
 			str +=  "   <div class='footer'>&nbsp;</div>\n"
 			str +=  "  </div>\n"
 		end
